@@ -81,3 +81,108 @@ int main(){
     printf("%d ",b);
     return 0;
 }
+
+
+
+
+4.
+#include<stdio.h>
+int main(){
+    int a,b;
+    printf("Enter a : ");
+    scanf("%d",&a);
+    printf("Enter b : ");
+    scanf("%d",&b);
+    int temp;//swapping the numbers or veriables
+    temp = a;
+    a = b;
+    b = temp;
+    printf("the value of a is %d\n",a);
+    printf("The value of b is %d",b);
+    return 0;
+}
+
+
+
+
+5.Game:
+#include<stdio.h>
+int main(){
+    int start,guss,try;
+    printf("___________Well Come______________\n");
+    printf("Enter 1 to play game and 2 to quite :");
+    scanf("%d",&start);
+    if(start==1){
+        printf("Game Has Been Started \n");
+        printf("To win this game you have to guess the number from 0 to 9 and you can try 2 times\n\n");
+        printf("Enter your answer :");
+        scanf("%d",&guss);
+        if(guss==3 || guss==5){
+            printf("You are correct");
+        }
+        else{
+            for(int i=1;i<=2;i++){
+                printf("You are wrong \n");
+                printf("pess 1 to try againor press any other to quite :");
+                scanf("%d",&try);
+                if(try==1){
+                    printf("Enter your answer :");
+                    scanf("%d",&guss);
+                    if(guss==3 || guss==5){
+                        printf("You are correct ");
+                        break;
+                    }
+                    else{
+                        printf("Sorry your chance is over \n");
+                        printf("ThankYou for playing this game.....");
+                    }
+                }
+                else{
+                    printf("You have quite the game \n");
+                    printf("ThankYou for playing this game.....");
+                    break;
+                }
+            }
+        }
+    }
+    else{
+        printf("Game Over");
+    }
+    return 0;
+}
+
+
+
+
+
+6.printfing the address of veriables:
+#include<stdio.h>
+int main(){
+     int a = 5;
+     int b = 5;
+     printf("%p\n",&b);
+     printf("%p",&a);//%p is format specifiier for  address print 
+    return 0;
+}
+
+
+
+7. To store address of verables using pointer
+#include<stdio.h>
+int main(){
+     int a = 5;
+     int* x =&a;//int* pointer which can store address
+     printf("%p",x);//%p is format specifiier for  address print 
+    return 0;
+}
+
+
+8..VVVVVIMP assing value using pointer address
+#include<stdio.h>
+int main(){ // By using pointer we can playwith the adress and change its value
+    int a = 25;
+    int* x = &a;//Here we made pointer to store the address of the a veriables
+    //This THis is very very important 
+    *x = 7; //Here by doing *x we are going in inside of x where a address is stored and we are going to address of a and assigning the value 7 now the value of a is 7
+    printf("%d",a)
+}
