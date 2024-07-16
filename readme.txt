@@ -186,3 +186,32 @@ int main(){ // By using pointer we can playwith the adress and change its value
     *x = 7; //Here by doing *x we are going in inside of x where a address is stored and we are going to address of a and assigning the value 7 now the value of a is 7
     printf("%d",a)
 }
+
+
+9.Write a function to compute yhe greatest common diviser of the two given numbers:
+#include<stdio.h>
+int min(int a,int b){
+    if(a<b) return a;
+    else return b;
+}
+int gcd(int a, int b){
+    int hcf;
+    for(int i=1;i<=min(a,b);i++){ //by using oposite loop you can do its easily //for(int i=min(a,b);i>=1;i--);// by using this method if the if condiotion fullfill then loop dosent run again
+        if(a%i==0 && b%i==0){
+            hcf = i;
+            // if you use opostie method then you have to put break here //break;
+        }
+    }
+    return hcf;
+}
+int main(){
+    int a;
+    printf("Enter 1st number : ");
+    scanf("%d",&a);
+    int b;
+    printf("Enter 2nd number : ");
+    scanf("%d",&b);
+    int hcf = gcd(a,b);
+    printf("The HCF/GCD of %d and %d is : %d",a,b,hcf);
+    return 0;
+}
