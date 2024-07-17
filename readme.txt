@@ -188,7 +188,7 @@ int main(){ // By using pointer we can playwith the adress and change its value
 }
 
 
-9.Write a function to compute yhe greatest common diviser of the two given numbers:
+9.Write a function to compute the greatest common diviser of the two given numbers:
 #include<stdio.h>
 int min(int a,int b){
     if(a<b) return a;
@@ -213,5 +213,50 @@ int main(){
     scanf("%d",&b);
     int hcf = gcd(a,b);
     printf("The HCF/GCD of %d and %d is : %d",a,b,hcf);
+    return 0;
+}
+
+10. Sum of the two numbers using functions:
+#include<stdio.h>
+int sum1(int x, int y){
+    int sum = x+y;
+    return sum;
+}
+int main(){//always main function run first and there is only one functions
+    int a,b;//integer veriables
+    printf("Enter First Number : ");//to printf " "Insides print functions
+    scanf("%d",&a); // to Get input from users
+    printf("Enter Second Number : ");
+    scanf("%d",&b);
+    int sum = sum1(a,b);//fuctions calling 
+    printf("The Sum of %d and %d is :%d",a,b,sum);//this will print the outputs
+    return 0;
+}
+
+11.Swaping functions by using this we can swap the value of veriables:
+#include<stdio.h>
+void swap(int a,int b){ // using functions
+    int temp = a;
+    a = b;
+    b = temp;
+    return;
+}
+int main(){
+    int a,b;
+    printf("Enter a : ");
+    scanf("%d",&a);
+    printf("Enter b : ");
+    scanf("%d",&b);
+    // int temp;//swapping the numbers or veriables
+    // temp = a;
+    // a = b;
+    // b = temp;
+    // a = a+b;//with no extra veriable using math 
+    // b = a-b;
+    // a = a-b;
+    swap(a,b);//function call
+
+    printf("the value of a is %d\n",a);
+    printf("The value of b is %d",b);
     return 0;
 }
