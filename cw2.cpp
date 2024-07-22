@@ -26,7 +26,7 @@ int main(){
 	total= math+english+micro+cp+account;
 	printf("\n\nResult of the students :\nThe name of the students is :%s\nThe roll number of the students is :%d\nThe facuilty of the students is :%s\nThe gender of the students is :%c",name,roll_no,facuilty,gender);
 	printf("\nObtain marks of the students :\n\tIn Math : %d\n\tIn English : %d\n\tIn Micro proceser : %d\n\tIn C programming : %d\n\tIn Accounting : %d",math,english,micro,cp,account);
-	printf("\n*Total obtain marks : %d\n",total);
+	printf("\n*Total obtain marks is : %d\n",total);
 	float percentage=((float)total*100.0)/500.0;//casting the integer to a float in the expration
 	printf("*Obtain percentage is : %f\n",percentage);
 	if(percentage>=80){
@@ -38,9 +38,6 @@ int main(){
 	else{
 		printf("*You have secured less then second disvision");
 	}
-	if(percentage>=40.0){
-		printf("\n*You are passed");
-	}
-	else("\n*You are failed");
+	percentage>=40.0 ? printf("\n*You are passed") : printf("\n*You are failed");//using ternary operator
 	return 0;
 }
