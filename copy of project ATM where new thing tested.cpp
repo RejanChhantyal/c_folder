@@ -53,6 +53,7 @@ int main(){
                         scanf("%d",&_again);
                         break;
                     default:
+                    	printf("\nYou have exit..");
                         _again=0;//If hami le yesma again ko value 0 assigne na garko vaye while loop ko condition always fullfill hunthyo //and by _again ko value 0 pare ma loop ko condition nai full fill hudina ra loop bata scape garna sakinxa
                 }
             }while(_again==1);
