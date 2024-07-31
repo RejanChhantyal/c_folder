@@ -53,7 +53,6 @@ int main(){
                         scanf("%d",&_again);
                         break;
                     default:
-                    	printf("\nYou have exit..");
                         _again=0;//If hami le yesma again ko value 0 assigne na garko vaye while loop ko condition always fullfill hunthyo //and by _again ko value 0 pare ma loop ko condition nai full fill hudina ra loop bata scape garna sakinxa
                 }
             }while(_again==1);
@@ -63,15 +62,15 @@ int main(){
         else{
             printf("\nYou have entered incorrect pin Now you have %d try left",counttry);
             counttry--;
-            printf("\n\nEnter 1 to try again and 5 to exit : ");
+            printf("\n\nEnter 1 to try again and any other to exit : ");
             scanf("%d",&_try);
             }
-    	totaltry += _try;
+        totaltry+= (_try!=2) ? _try : (_try+2);//Ternary operator(You cant directly assign value inside of ternary operators
     }while(totaltry<=2);
-    if(_try>=3){
+    if(_try>=2){
     	printf("\nYou have exit...");
 	}
-    else if(totaltry>0){
+    else if(totaltry>2 && totaltry<4){
         printf("\nYou have enter to may wrong pin..");
     }
     printf("\n\nThank You for using our CHHANTYAL BANK LiMITED..");
