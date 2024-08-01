@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main(){
     double total=0,deposit,withdraw;
-    int pin,_try=0,totaltry = 0,_proceses,_again = 1,counttry=2;
+    int pin,_try,totaltry = 0,_proceses,_again = 1,counttry=2;
     do{
     	int count = 3;
         printf("----WELLCOME TO CHHANTYAL BANK LIMITED----");
@@ -65,13 +65,13 @@ int main(){
             printf("\n\nEnter 1 to try again and any other to exit : ");
             scanf("%d",&_try);
             }
-        totaltry+= (_try!=2) ? _try : (_try+2);//Ternary operator(You cant directly assign value inside of ternary operators
+        totaltry+= (_try==2 || _try==0) ? (_try+5) : _try; //Ternary operator(You cant directly assign value inside of ternary operators
     }while(totaltry<=2);
-    if(_try>=2){
+    if(_try>=2 || _try==0){
     	printf("\nYou have exit...");
 	}
     else if(totaltry>2 && totaltry<4){
-        printf("\nYou have enter to may wrong pin..");
+        printf("\nYou have enter to many wrong pin..");
     }
     printf("\n\nThank You for using our CHHANTYAL BANK LiMITED..");
 return 0;
