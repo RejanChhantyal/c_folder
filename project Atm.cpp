@@ -13,7 +13,7 @@ int main(){
                 printf("\nYou have entered correct pin code or alredy entred..");
                 printf("\n\n----MAIN MENUE----");
                 printf("\n1. Deposit Money\n2. Withdraw Money\n3. Your personal information\n4.Check you current Balance");
-                printf("\n\nEnter 1 to deposit money , 2 to withdraw money , 3 to check your imformation , 4 to check your current balance and any other to exits : ");
+                printf("\n\nEnter above number to continue and any other to exits : ");
                 scanf("%d",&_proceses);
                 switch(_proceses){
                     case 1:
@@ -21,7 +21,7 @@ int main(){
                         printf("\nEnter a amount to Deposite : ");
                         scanf("%lf",&deposit);
                         total += deposit;
-                        printf("\nYou have Deposit +%lfRupees And your current balance is %lfRupees.",deposit,total);
+                        printf("\nYou have Deposit +%lfRupees And your New balance is %lfRupees.",deposit,total);
                         printf("\n\nEnter 1 to use again and any other number to exit : ");
                         scanf("%d",&_again);
                         break;
@@ -30,13 +30,13 @@ int main(){
                         printf("\nEnter a amount to Withdraw : ");
                         scanf("%lf",&withdraw);
                         if(total<withdraw){
-                            printf("\nInsufecent amount your current balance is %lfRupees.",total);
+                            printf("\nInsufecent amount your Current balance is %lfRupees.",total);
                             printf("\n\nEnter 1 to use again and any other number to exit : ");
                             scanf("%d",&_again);
                         }
                         else{
                             total -= withdraw;
-                            printf("\nYou have Withdraw -%lfRupees And your current balance is %lfRupees.",withdraw,total);
+                            printf("\nYou have Withdraw -%lfRupees And your New balance is %lfRupees.",withdraw,total);
                             printf("\n\nEnter 1 to use again and any other number to exit : ");
                             scanf("%d",&_again);
                         }
